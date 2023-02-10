@@ -335,7 +335,7 @@ body {
         display: block;
         font-size: 21px;
         display: block;
-        padding: 60px 0;
+        padding: 35px 0;
     }
     .nav__contacts {
         justify-content: center;
@@ -356,7 +356,17 @@ body {
     .about__photo {
         margin-bottom: 30px;
     }
+    .about__photo img {
+        max-width: 300px;
+    }
     .about__projects {
         width: 100%;
+    }
+}
+
+
+@media(max-width: 780px) {
+    .about__photo img {
+        max-width: 200px;
     }
 }
