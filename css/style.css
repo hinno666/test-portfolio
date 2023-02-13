@@ -112,7 +112,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 25px;
 }
 .header__menu {
   display: flex;
@@ -254,7 +254,7 @@ body {
 
 .projects__container {
   position: absolute;
-  top: 80px;
+  top: 20%;
   left: 0;
   width: 100%;
   display: flex;
@@ -359,8 +359,10 @@ body {
     min-height: 75px;
   display: flex;
   width: 100%;
-  background: rgba(60, 35, 67, 0.13);
+  background: rgba(14, 11, 14, 0.595);
   line-height: 1.3;
+  padding: 20px 0;
+  box-shadow: 0 0 3px;
 }
 
 @keyframes wave-animation {
