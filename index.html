@@ -16,11 +16,11 @@
     <title>portfolio by Andrey Karpov</title>
   </head>
   <body>
-<div class="wrapper">
+    <div class="wrapper">
       <header class="header" id="home">
         <div class="container">
           <div class="header__menu">
-            <a href="#" class="header__logo">byCarp</a>
+            <a href="#" class="header__logo">webDev</a>
             <nav class="header__nav">
               <div class="nav__container">
                 <ul class="menu__list">
@@ -67,29 +67,26 @@
       </header>
       <main class="main">
         <div class="container">
+          <a href="#" class="scroll-to-top"><i class="fa fa-chevron-up"></i></a>
           <div class="main__about">
+            <div class="about__photo">
+              <img src="img/me.png" alt="" />
+            </div>
             <div class="about__container">
               <h2 class="about__name">Hi, I`m Andrew</h2>
               <h1 class="about__prof">I Want To Become A Web Developer</h1>
               <p class="about__info">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-                maiores quos dicta cumque nemo a earum architecto fugiat, commodi
-                veniam?
+                maiores quos dicta cumque nemo a earum architecto fugiat,
+                commodi veniam?
               </p>
               <button class="about__projects">VIEW MY PROJECTS</button>
-            </div>
-            <div class="about__photo">
-              <img src="img/photo.png" alt="" />
             </div>
           </div>
           <div class="projects__container">
             <div class="project__card">
               <div class="project__name">Quotegeneration-project</div>
-              <img
-                src="img/quote.jpg"
-                alt=""
-                class="project__img"
-              />
+              <img src="img/quote.jpg" alt="" class="project__img" />
               <a
                 href="https://hinno666.github.io/quotegeneration-project/"
                 target="blank"
@@ -99,11 +96,7 @@
             </div>
             <div class="project__card">
               <div class="project__name">Modal Window Project</div>
-              <img
-                src="img/modal.png"
-                alt=""
-                class="project__img"
-              />
+              <img src="img/modal.png" alt="" class="project__img" />
               <a
                 href="https://hinno666.github.io/modal-window/"
                 target="blank"
@@ -113,21 +106,23 @@
             </div>
             <div class="project__card">
               <div class="project__name">toDo list</div>
-              <img
-                src="img/todo.png"
-                alt=""
-                class="project__img"
-              />
-              <a href="https://hinno666.github.io/toDo-list/" target="blank" class="project__link">click on me</a>
+              <img src="img/todo.png" alt="" class="project__img" />
+              <a
+                href="https://hinno666.github.io/toDo-list/"
+                target="blank"
+                class="project__link"
+                >click on me</a
+              >
             </div>
             <div class="project__card">
               <div class="project__name">timer project</div>
-              <img
-                src="img/timer.jpg"
-                alt=""
-                class="project__img"
-              />
-              <a href="https://hinno666.github.io/timer-prioject/" target="blank" class="project__link">click on me</a>
+              <img src="img/timer.jpg" alt="" class="project__img" />
+              <a
+                href="https://hinno666.github.io/timer-prioject/"
+                target="blank"
+                class="project__link"
+                >click on me</a
+              >
             </div>
             <div class="project__close">
               <span></span>
@@ -139,25 +134,74 @@
           <div class="container">
             <h2 class="about__title">About me</h2>
             <div class="about__info">
-              <p class="about__text">I`m Andrey - self-taught in front-end development from Tula. I`m interested in programming and everything connected with it.</p>
-              <p class="about__text">I`m studying at courses 'The Complete JavaScript + React Course - From Zero to Result' and 'Web-Developer' by Ivan Petrichenko on Udemy</p>
-              <p class="about__text">Ready to implement excellent projects with wonderful people.</p>
+              <p class="about__text">
+                I`m Andrey - self-taught in front-end development from Tula. I`m
+                interested in programming and everything connected with it.
+              </p>
+              <p class="about__text">
+                I`m studying at courses 'The Complete JavaScript + React Course
+                - From Zero to Result' and 'Web-Developer' by Ivan Petrichenko
+                on Udemy
+              </p>
+              <p class="about__text">
+                Ready to implement excellent projects with wonderful people.
+              </p>
             </div>
           </div>
         </div>
       </main>
       <footer class="footer" id="contacts">
-    <ul class="footer__list">
-      <li class="footer__list-item"><a class="footer__link" href="https://vk.com/krpvu">Vk</a></li>
-      <li class="footer__list-item"><a class="footer__link" href="https://www.instagram.com/krpv.uo">Instagram</a></li>
-      <li class="footer__list-item"><a class="footer__link" href="luffytaroyot@gmail.com">Email</a></li>
-      <li class="footer__list-item"><a class="footer__link" href="https://www.codewars.com/users/hinno666">Codewars</a></li>
-      <li class="footer__list-item"><a class="footer__link" href="https://github.com/hinno666">Github</a></li>
-      <li class="footer__list-item"><p>👋</p></li>
-    </ul>
-  </footer>
-</div>
+        <p class="footer__title">Send me message</p>
+        <form onsubmit="sendForm(); return false;">
+          <input type="text" id="name" name="name" placeholder="Имя" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Сообщение"
+            required
+          ></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="https://vk.com/krpvu">Vk</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="https://www.instagram.com/krpv.uo"
+              >Instagram</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="luffytaroyot@gmail.com">Email</a>
+          </li>
+          <li class="footer__list-item">
+            <a
+              class="footer__link"
+              href="https://www.codewars.com/users/hinno666"
+              >Codewars</a
+            >
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="https://github.com/hinno666"
+              >Github</a
+            >
+          </li>
+          <li class="footer__list-item"><p>👋</p></li>
+        </ul>
+      </footer>
+    </div>
     <!-- JavaScript -->
+    <script
+      src="https://kit.fontawesome.com/e5c25d5a77.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -92,6 +92,7 @@ h6 {
   font-weight: 400;
 }
 /*--------------------*/
+
 body {
   font-family: "Poppins", sans-serif;
   color: #f8f7f9;
@@ -102,7 +103,31 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* scroll-button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(113, 166, 203, 0.6);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 24px;
+  transition: opacity 0.3s ease-in-out;
+}
 
+.scroll-to-top:hover {
+  opacity: 0.7;
+}
+
+.fa-chevron-up {
+  display: inline-block;
+  margin-top: 13px;
+}
 /* Header  */
 .no__scroll {
   overflow: hidden;
@@ -197,6 +222,7 @@ body {
 }
 .menu__item:hover {
   transform: scale(1.1);
+  color: rgba(113, 166, 203, 0.6);
 }
 .menu__link {
   font-weight: 400;
@@ -250,16 +276,23 @@ body {
 .about__projects:hover {
   background: rgba(47, 85, 113, 0.6);
 }
+.about__photo {
+  background: rgba(47, 85, 113, 0.6);
+  border-radius: 20px;
+}
 .about__photo img {
-  transform: rotateY(180deg);
-  max-width: 400px;
-  border-radius: 100%;
+  max-width: 450px;
+  height: 450px;
+  border-radius: 20px;
   box-shadow: 0px 5px 20px 10px rgba(9, 0, 8, 0.252);
 }
 
 .projects__container {
   position: absolute;
+  left: 0;
+  right: 0;
   top: 20%;
+  height: auto;
   /* left: 0;
   width: 100%; */
   display: flex;
@@ -267,12 +300,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   background: rgb(47, 85, 113);
-  padding: 100px 50px;
+  padding: 120px 50px;
   border-radius: 15px;
   /* display: none; */
   transition: 1s ease;
   transform: scale(0);
-  opacity: 0;
+  opacity: 1;
 }
 .projects__container.project__open {
   /* display: flex; */
@@ -352,20 +385,90 @@ body {
 
 
 /* footer section */
+.footer {
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(14, 11, 14, 0.595);
+  line-height: 1.3;
+  box-shadow: 0 0 3px;
+}
+.footer__title {
+  margin-top: 100px;
+  font-size: 30px;
+}
+/* footer - form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Стили для поля ввода имени */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Стили для поля ввода email */
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Стили для поля ввода сообщения */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Стили для кнопки отправки формы */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Стили для кнопки отправки формы при наведении на неё курсора */
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
 
 .footer__list {
-  display: inline-grid;
-  grid-auto-flow: row;
-  grid-gap: 24px;
-  justify-items: center;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: #000;
+  width: 100%;
+  padding: 20px 0;
 }
 
-@media (min-width: 500px) {
-  .footer__list {
-    grid-auto-flow: column;
-  }
-}
 
 .footer__link {
   color: white;
@@ -387,15 +490,9 @@ body {
 }
 
 
-.footer {
-    min-height: 75px;
-  display: flex;
-  width: 100%;
-  background: rgba(14, 11, 14, 0.595);
-  line-height: 1.3;
-  padding: 20px 0;
-  box-shadow: 0 0 3px;
-}
+
+
+/* animations */
 
 @keyframes wave-animation {
   0%,
@@ -407,6 +504,15 @@ body {
   }
   75% {
     transform: rotate(-15deg);
+  }
+}
+
+
+/* @media */
+
+@media (min-width: 500px) {
+  .footer__list {
+    grid-auto-flow: column;
   }
 }
 
@@ -468,7 +574,7 @@ body {
   .main__about {
     text-align: center;
     flex-direction: column;
-    flex-flow: wrap-reverse;
+    flex-flow: wrap;
     justify-content: center;
     margin-bottom: 30px;
     height: auto;
@@ -476,16 +582,10 @@ body {
   .about__photo {
     margin-bottom: 30px;
   }
-  .about__photo img {
-    max-width: 300px;
-  }
   .about__projects {
     width: 100%;
   }
 }
 
 @media (max-width: 780px) {
-  .about__photo img {
-    max-width: 200px;
-  }
 }
