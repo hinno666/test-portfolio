@@ -292,7 +292,6 @@ body {
   left: 0;
   right: 0;
   top: 20%;
-  height: auto;
   /* left: 0;
   width: 100%; */
   display: flex;
@@ -314,7 +313,6 @@ body {
 }
 .project__card {
   max-width: 250px;
-  height: 250px;
   background: rgb(23, 47, 63);
   color: #afc1d3;
   font-weight: 700;
@@ -323,14 +321,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 20px 20px;
+  margin-bottom: 20px;
 }
 .project__name {
 }
 .project__img {
-  border-radius: 10px;
-  height: 270px;
-}
+  border-radius: 10px;}
 .project__link {
   font-size: 20px;
   background: #000;
